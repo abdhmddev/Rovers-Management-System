@@ -1,66 +1,35 @@
-.outerbox{
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 16px;
-    letter-spacing: -0.2px;
-    line-height: 26px;
-    text-decoration: none solid rgb(106,134,149);
-    text-align: left;
-    word-spacing: 0px;
-    background-color: #ffffff;
-    background-position: 0% 0%;
-    color: #6A8695;
-    height: 100%;
-    width: 100%;
-    margin: 0 -15px 0 -15px;
+
+body {
+    background-color: var(--main-color);
+}
+
+.outerbox {
     display: flex;
     justify-content: center;
-    transform: none;
-    transition: all 0s ease 0s;
-    box-sizing: border-box;
-    margin-top: 50px;
-    padding: 10px;
+    align-items: center;
+    background-color: var(--main-color-light);
+    height: calc(100vh - 80px);
+    width: 100%;
+    padding: 30px;
 }
-.innerbox{
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 16px;
-    letter-spacing: -0.2px;
-    line-height: 26px;
-    text-decoration: none solid rgb(106,134,149);
-    text-align: left;
-    word-spacing: 0px;
+
+.innerbox {
     background-color: #ffffff;
-    background-position: 0% 0%;
     color: #6A8695;
-    height: 406px;
-    width: 690px;
-    padding: 40px 40px 40px 40px;
-    display: block;
-    transform: none;
-    transition: all 0s ease 0s;
-    box-sizing: border-box;
-    box-shadow: rgba(64, 1, 4, 0.1)0px 50px 100px 0px,rgba(248, 99, 107, 0.004)0px -6px 0px 0px;
-    border-top-left-radius: 5px ;
-    border-top-right-radius: 5px ;
-    border-bottom-left-radius:5px ;
-    border-bottom-right-radius: 5px ;
+    height: fit-content;
+    width: 70%;
+    padding: 40px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0px 5px 25px #6e6e6e77 !important;
 }
-h2{
-    font-family: Poppins, sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    line-height: 36px;
-    text-decoration: none solid rgb(38,59,94);
-    text-align: left;
-    word-spacing: 0px;
-    background-color: #ffffff;
-    background-position: 0% 0%;
-    color: #263B5E;
-    height: 36px;
-    width: 610px;
-    margin: 0 0  10px 0;
-    display: block;
-    transform: none;
-    transition: all 0s ease 0s;
-    box-sizing: border-box;
+
+.logo {
+    height: 50px;
+    width: fit-content !important;
+}
+
+.circle-icon {
+    border: 2px solid var(--main-color);
+    border-radius: 100%;
 }
