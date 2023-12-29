@@ -1,0 +1,39 @@
+body {
+    background-color: var(--main-color);
+}
+
+.outerbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color-light);
+    height: 100% ;
+    width: 100% ;
+    padding: 30px;
+    padding-top: 100px;
+}
+
+.innerbox {
+    background-color: #ffffff;
+    color: #6A8695;
+    height: fit-content;
+    width: 70%;
+    padding: 40px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0px 5px 25px #6e6e6e77 !important;
+}
+
+.logo {
+    height: 50px;
+    width: fit-content !important;
+}
+
+.circle-icon {
+    border: 2px solid var(--main-color);
+    border-radius: 100%;
+}
+.navbar{
+position: fixed !important;
+width: 100% !important;
+}
