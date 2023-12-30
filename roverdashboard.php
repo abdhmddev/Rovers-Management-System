@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
   <title>الجوالة</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/components.css">
-  <link rel="stylesheet" href="styles/info.css">
-  <link rel="stylesheet" href="styles/pageform.css">
-  <link rel="stylesheet" href="bootstrap/css//bootstrap.min.css">
+   <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/info.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -19,12 +19,16 @@
   <div class="outerbox">
     <div class="innerbox">
       <div class="pagebtn row justify-content-around flex-nowrap w-100">
-        <div class="col-4 m-0 p-1 row justify-content-center align-items-center"><button type="submit" name="submit1" class="btn btn-primary"> <a href="" style="color: #fff !important;">مرحلة الإعداد</a></button></div>
-        <div class="col-4 m-0 p-1 row justify-content-center align-items-center"><button type="submit" name="submit2" class="btn btn-primary"><a href="" style="color: #fff !important;">مرحلة التدريب </a></button></div>
-        <div class="col-4 m-0 p-1 row justify-content-center align-items-center"><button type="submit" name="submit3" class="btn btn-primary"> <a href="" style="color: #fff !important;">مرحلة الخدمة العامة </a></button></div>
+        <div class="col-4 m-0 p-1 row justify-content-center align-items-center text-center"><a href="roverdashboard.php?filter=1" style="width: 100%;
+    color: #fff !important; background-color: var(--main-color); padding:5px; border-radius:5px;">مرحلة الإعداد</a></div>
+        <div class="col-4 m-0 p-1 row justify-content-center align-items-center text-center"><a href="roverdashboard.php?filter=2" style="width: 100%;
+    color: #fff !important; background-color: var(--main-color); padding:5px; border-radius:5px;">مرحلة التدريب</a></div>
+        <div class="col-4 m-0 p-1 row justify-content-center align-items-center text-center"><a href="roverdashboard.php?filter=3" style="width: 100%;
+    color: #fff !important; background-color: var(--main-color); padding:5px; border-radius:5px;">مرحلة الخدمة العامة</a></div>
       </div>
-      <div>
-        
+      <hr class="mb-5">
+      <div class="row">
+        <?php include "shit.php" ?> 
       </div>
     </div>
   </div>

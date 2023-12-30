@@ -1,7 +1,7 @@
 <?php
 include "php/connect.php";
 
-
+$data = [];
 
 $filter = "";
 if (isset($_GET['filter'])) {
@@ -18,34 +18,23 @@ if ($result) {
 // echo json_encode($data);
 
 foreach ($data as $type) {
-    echo "</br> </br>";
-    echo "<center>";
-    echo "<table border='2' width='50%'>";
-    echo "<th>ID</th>";
-    echo "<th>Name</th>";
-    echo "<th>Type</th>";
-    echo "<th>Action</th>";
-
-    foreach ($type as $row) {
-
-        $id = $row['id'];
-        $name = $row['name'];
-        $type = $row['type'];
-        echo "<tr>";
-        echo "<td>$id</td>";
+    echo '<table class="table">
+            <thead>
+                <tr>
+                    <th colspan="3">' . $type[0]['type'] .'</th>
+                </tr>
+            </thead>
+            <tbody>';
+    foreach ($type as $demand) {
+        $id = $demand['id'];
+        $name = $demand['name'];
+        $type = $demand['type'];
+        echo '<tr scope="row">';
+        echo "<td class='check'><input type='checkbox' name='demand[]' value='$id'></td>";
         echo "<td>$name</td>";
-        echo "<td>$type</td>";
-        echo "<td><input type='checkbox' name='demand[]' value='$id'></td>"; // Checkbox
-        echo "</tr>";
+        echo '</tr>';
     }
 
-    echo "</table>";
-    echo "</center>";
+    echo "</tbody>
+        </table>";
 }
-
-// if ($result) {
-//     while ($row = mysqli_fetch_object($result)) {
-//         printf($row . "\n");
-
-//     }
-// }

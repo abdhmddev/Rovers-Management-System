@@ -1,3 +1,11 @@
 .pagebtn{
     max-width: 100%;
 }
+
+thead, thead tr, thead th {
+    color: var(--main-color) !important ;
+}
+
+tbody .check {
+    width: 25px;
+}
