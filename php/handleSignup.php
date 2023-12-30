@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!$result) {
             die('Record not added: ' . mysqli_error($con));
         } else {
-            header('Location:/Rovers-Management-System/login.php');
+            header('Location:/rms/login.php');
             exit; 
         }
         mysqli_stmt_close($stmt);

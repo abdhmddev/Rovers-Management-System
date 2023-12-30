@@ -1,4 +1,4 @@
-<form action="/Rovers-Management-System/php/handleinfo.php" method="post" enctype="multipart/form-data">
+<form action="/rms/php/handleinfo.php" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="personal_pic" class="form-label">الصورة الشخصية</label>
             <input accept="image/png,image/jpg,image/jpeg" type="file" class="form-control " name="personal_pic" value="">

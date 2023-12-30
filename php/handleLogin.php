@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row['password'])) {
             session_start();
             $_SESSION['userid'] = $row['id'];
-            header("Location:/Rovers-Management-System/info.php");
+            header("Location:/rms/info.php");
             exit;
         } else {
             echo "Incorrect password";
