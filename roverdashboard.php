@@ -19,13 +19,15 @@
   <div class="outerbox">
     <div class="innerbox">
       <div class="pagebtn row justify-content-around flex-nowrap w-100">
-        <div class="col-4 m-0 p-1 row justify-content-center align-items-center"><button type="submit" class="btn btn-primary">مرحلة الإعداد</button></div>
-        <div class="col-4 m-0 p-1 row justify-content-center align-items-center"><button type="submit" class="btn btn-primary">مرحلة التدريب </button></div>
-        <div class="col-4 m-0 p-1 row justify-content-center align-items-center"><button type="submit" class="btn btn-primary">مرحلة الخدمة العامة</button></div>
+        <div class="col-4 m-0 p-1 row justify-content-center align-items-center"><button type="submit" name="submit1" class="btn btn-primary"> <a href="" style="color: #fff !important;">مرحلة الإعداد</a></button></div>
+        <div class="col-4 m-0 p-1 row justify-content-center align-items-center"><button type="submit" name="submit2" class="btn btn-primary"><a href="" style="color: #fff !important;">مرحلة التدريب </a></button></div>
+        <div class="col-4 m-0 p-1 row justify-content-center align-items-center"><button type="submit" name="submit3" class="btn btn-primary"> <a href="" style="color: #fff !important;">مرحلة الخدمة العامة </a></button></div>
+      </div>
+      <div>
+        
       </div>
     </div>
   </div>
-
 
 
   <script src="bootstrap/js/bootstrap.min.js"></script>

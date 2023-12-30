@@ -21,7 +21,7 @@
                         <a class="nav-link active" aria-current="page" href="info.php">الملف الشخصي</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="login.php">الخروج </a>
+                        <a class="nav-link active" aria-current="page" href="/ROVERS-MANAGEMENT-SYSTEM/php/handleLogout.php">الخروج </a>
                     </li>
                 </ul>
             </div>

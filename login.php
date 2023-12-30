@@ -25,11 +25,11 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">البريد الالكتروني</label>
-          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="email" name="email" class="form-control"  aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">كلمة السر</label>
-          <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+          <input type="password" name="pass" class="form-control" >
         </div>
         <div class="mb-3 ">
           <div><a href="signup.php">ليس لديك حساب؟ سجل الآن</a></div>
