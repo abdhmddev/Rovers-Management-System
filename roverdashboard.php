@@ -15,15 +15,17 @@
 
 <body>
   <?php include "components/mainnavbar.php" ?>
+  <?php $roverid = $_GET['id']; ?>
+  
 
   <div class="outerbox">
     <div class="innerbox">
       <div class="pagebtn row justify-content-around flex-nowrap w-100">
-        <div class="col-4 m-0 p-1 row justify-content-center align-items-center text-center"><a href="roverdashboard.php?filter=1" style="width: 100%;
+        <div class="col-4 m-0 p-1 row justify-content-center align-items-center text-center"><a href="roverdashboard.php?id=<?php echo $roverid ?>&filter=1" style="width: 100%;
     color: #fff !important; background-color: var(--main-color); padding:5px; border-radius:5px;">مرحلة الإعداد</a></div>
-        <div class="col-4 m-0 p-1 row justify-content-center align-items-center text-center"><a href="roverdashboard.php?filter=2" style="width: 100%;
+        <div class="col-4 m-0 p-1 row justify-content-center align-items-center text-center"><a href="roverdashboard.php?id=<?php echo $roverid ?>&filter=2" style="width: 100%;
     color: #fff !important; background-color: var(--main-color); padding:5px; border-radius:5px;">مرحلة التدريب</a></div>
-        <div class="col-4 m-0 p-1 row justify-content-center align-items-center text-center"><a href="roverdashboard.php?filter=3" style="width: 100%;
+        <div class="col-4 m-0 p-1 row justify-content-center align-items-center text-center"><a href="roverdashboard.php?id=<?php echo $roverid ?>&filter=3" style="width: 100%;
     color: #fff !important; background-color: var(--main-color); padding:5px; border-radius:5px;">مرحلة الخدمة العامة</a></div>
       </div>
       <hr class="mb-5">

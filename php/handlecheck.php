@@ -13,7 +13,6 @@ if ($roverid !== null && $demanid !== null) {
     include "connect.php";
 
     $stmt = "";
-
     if ($checked === "ins") {
         $stmt = mysqli_prepare($con, "INSERT INTO expired (userid, demandid, leaderid, finished) VALUES (?, ?, ?, 1)");
         mysqli_stmt_bind_param($stmt, 'iii', $roverid, $demanid, $leaderid);
@@ -21,14 +20,40 @@ if ($roverid !== null && $demanid !== null) {
         $stmt = mysqli_prepare($con, "DELETE FROM expired WHERE userid = ? AND demandid = ?");
         mysqli_stmt_bind_param($stmt, 'ii', $roverid, $demanid);
     }
+
     $result = mysqli_stmt_execute($stmt);
 
     if (!$result) {
-        http_response_code(500); // Internal Server Error
+        http_response_code(500);
         $response = array('message' => 'Failed to execute database query', 'success' => false);
         echo json_encode($response);
     } else {
+
         $response = array('message' => 'Demand updated successfully', 'success' => true);
+
+        if ($checked === "ins") {
+            $last_id = mysqli_insert_id($con);
+            $stmt = mysqli_prepare($con, "SELECT date FROM expired WHERE id=?");
+            mysqli_stmt_bind_param($stmt, 'i', $last_id);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_bind_result($stmt, $date);
+            mysqli_stmt_fetch($stmt);
+            $response['date'] = $date;
+            
+            mysqli_stmt_close($stmt);
+
+            $stmt = mysqli_prepare($con, "SELECT name, familyname FROM profiles WHERE id=?");
+            mysqli_stmt_bind_param($stmt, 'i', $leaderid);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_bind_result($stmt, $name, $familyname);
+            mysqli_stmt_fetch($stmt);
+            $response['leader']= $name;
+
+        } else if ($checked === "del") {
+            $response['date']="";
+            $response['leader']="";
+        }
+
         echo json_encode($response);
     }
 
