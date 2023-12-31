@@ -1,5 +1,5 @@
 <?php
-include "php/connect.php";
+include "connect.php";
 
 $data = [];
 
@@ -30,11 +30,10 @@ foreach ($data as $type) {
         $name = $demand['name'];
         $type = $demand['type'];
         echo '<tr scope="row">';
-        echo "<td class='check'><input type='checkbox' name='demand[]' value='$id'></td>";
+        echo "<td class='check'><input type='checkbox' name='demand[]' class='demand-checkbox' value='$id'></td>";
         echo "<td>$name</td>";
         echo '</tr>';
     }
-
     echo "</tbody>
         </table>";
 }

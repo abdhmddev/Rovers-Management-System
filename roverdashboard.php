@@ -28,13 +28,14 @@
       </div>
       <hr class="mb-5">
       <div class="row">
-        <?php include "shit.php" ?> 
+        <?php include "php/demands.php" ?> 
       </div>
     </div>
   </div>
 
 
   <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="scripts/check.js"></script>
 </body>
 
 </html>
