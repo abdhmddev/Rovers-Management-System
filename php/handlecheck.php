@@ -42,12 +42,12 @@ if ($roverid !== null && $demanid !== null) {
             
             mysqli_stmt_close($stmt);
 
-            $stmt = mysqli_prepare($con, "SELECT name, familyname FROM profiles WHERE id=?");
+            $stmt = mysqli_prepare($con, "SELECT name, familyname FROM profiles WHERE userid=?");
             mysqli_stmt_bind_param($stmt, 'i', $leaderid);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_bind_result($stmt, $name, $familyname);
             mysqli_stmt_fetch($stmt);
-            $response['leader']= $name;
+            $response['leader']= $name ." ".$familyname;
 
         } else if ($checked === "del") {
             $response['date']="";
