@@ -2,11 +2,11 @@ let checkboxes = document.querySelectorAll(".demand-checkbox");
 
 function getUserIdFromUrl() {
   const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('id') || 'defaultUserId'; // Use 'id' as the parameter name in your URL
+  return urlParams.get('id') || 'defaultUserId'; 
 }
 
 window.addEventListener('load', () => {
-  const userId = getUserIdFromUrl(); // Get the user ID from the URL
+  const userId = getUserIdFromUrl(); 
 
   checkboxes.forEach((checkbox) => {
     const savedData = localStorage.getItem(`checkbox_${userId}_${checkbox.value}`);
@@ -34,10 +34,10 @@ window.addEventListener('load', () => {
 
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener("change", (e) => {
-    const userId = getUserIdFromUrl(); // Get the user ID from the URL
+    const userId = getUserIdFromUrl(); 
 
     const formData = new FormData();
-    formData.append("roverid", userId); // Pass the user ID along with other data
+    formData.append("roverid", userId); 
     formData.append("demandid", e.target.value);
 
     if (e.target.checked) {

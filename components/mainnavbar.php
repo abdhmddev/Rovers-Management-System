@@ -24,7 +24,7 @@
                         <a class="nav-link active" aria-current="page" href="info.php">الملف الشخصي</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/rms/php/handleLogout.php">الخروج </a>
+                        <a class="nav-link active" aria-current="page" href="/RMS/php/handleLogout.php">الخروج </a>
                     </li>
                 </ul>
             </div>

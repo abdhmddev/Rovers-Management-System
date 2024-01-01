@@ -1,6 +1,6 @@
 <?php
 include "connect.php";
-
+session_start();
 function createImageFoldersIfNotExists($profileFolder, $cardFolder)
 {
     if (!file_exists($profileFolder)) {
@@ -12,6 +12,24 @@ function createImageFoldersIfNotExists($profileFolder, $cardFolder)
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_SESSION['form_submitted']) && $_SESSION['form_submitted'] === true) {
+        header("Location:/RMS/roverdashboard.php?filter=1");
+        exit;
+    }
+
+    // $message = '';
+
+    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //     // ... (Your form submission handling code goes here)
+    
+    //     if (/* Your form submission logic */) {
+    //         $_SESSION['form_submitted'] = true;
+    //         $message = "You have successfully submitted the form!";
+    //     } else {
+    //         $message = "There was an error submitting the form.";
+    //     }
+    // }
+
     $profileFolder = "../images/profile_pictures/";
     $cardFolder = "../images/card_pictures/";
 
@@ -54,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $stmt = mysqli_prepare($con, "INSERT INTO profiles (userid, profilepicture, cardpicture, name, fathername, familyname, commission, regiment, band, birthdate, nationality, address, job, dadjob, phonenumber, dadphonenumber, bloodtype, educationallevel, dateofjoining, scoutrank) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    session_start();
+    // session_start();
     $userid = $_SESSION['userid'];
     mysqli_stmt_bind_param($stmt, 'isssssssssssssssssss', $userid, $profilePicture, $cardPicture, $name, $fathername, $familyname, $commission, $regiment, $band, $birthdate, $nationality, $address, $job, $dadjob, $phonenumber, $dadphonenumber, $bloodtype, $educationallevel, $dateofjoining, $scoutrank);
 
