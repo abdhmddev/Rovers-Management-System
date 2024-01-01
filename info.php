@@ -1,4 +1,11 @@
-<?php include 'auth.php' ?>
+<?php include 'auth.php';
+
+if (isset($_SESSION['formsubmitted']) && $_SESSION['formsubmitted'] === "yes") {
+    header("Location:/RMS/roverdashboard.php?filter=1");
+    exit;
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +22,6 @@
 </head>
 
 <body>
-<?php include "components/mainnavbar.php" ?>
 <div  class="outerbox">
     <div class="innerbox">
     <?php include "components/info.php" ?>

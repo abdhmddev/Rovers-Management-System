@@ -1,8 +1,9 @@
 <?php
-if (isset($_SESSION['userid'])) {
+session_start(); 
 
-    session_start();
+if (isset($_SESSION['userid'])) {
     session_destroy();
-    header("Location:/RMS/login.php");
+    header("Location: /rms/login.php");
+    exit;
 }
 ?>

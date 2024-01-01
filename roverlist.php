@@ -27,9 +27,9 @@
             </button>
             <div class="collapse navbar-collapse flex-row justify-content-center" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="roverlist.php">لائحة الجوالة</a>
                     </li>
