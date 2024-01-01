@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row['password'])) {
             session_start();
             $_SESSION['userid'] = $row['id'];
-
+           
             $query2 = mysqli_prepare($con, "SELECT * FROM profiles WHERE profiles.userid = ?");
             mysqli_stmt_bind_param($query2, 's', $row['id']);
             mysqli_stmt_execute($query2);
@@ -26,8 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['formsubmitted'] = "yes";
                 $user = $result2->fetch_assoc();
                 $_SESSION['usertype'] = $user["scoutrank"];
-
-                header("Location:/rms/roverdashboard.php?filter=1");
+                $roverid = $user["id"];
+                header("Location:/rms/roverdashboard.php?id=$roverid&filter=1");
             }else{
             header("Location:/rms/info.php");
             exit;

@@ -30,8 +30,10 @@ foreach ($data as $type) {
         $name = $demand['name'];
         $type = $demand['type'];
         echo '<tr scope="row">';
-        if(isset($_GET['id'])){
+        if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == "قائد/شيخ العشيرة"){
             echo "<td class='check'><input type='checkbox' name='demand[]' class='demand-checkbox' value='$id'></td>";
+        }else{
+            echo "<td class='check'><input type='checkbox' disabled name='demand[]' class='demand-checkbox' value='$id'></td>";
         }
         echo "<td>$name</td>";
         echo "<td id='d$id'></td>";
