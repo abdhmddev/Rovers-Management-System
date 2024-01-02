@@ -43,3 +43,5 @@ foreach ($data as $type) {
     echo "</tbody>
         </table>";
 }
+
+

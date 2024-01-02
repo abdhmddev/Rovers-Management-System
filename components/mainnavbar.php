@@ -1,3 +1,4 @@
+<?php if (session_status() === PHP_SESSION_NONE) {session_start();} ?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand row flex-nowrap align-items-center" href="#">
@@ -15,10 +16,6 @@
                     <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
                 </li> -->
                 <?php
-
-                    if (session_status() === PHP_SESSION_NONE) {
-                        session_start(); 
-                    }
                 if (isset($_SESSION['usertype']) && $_SESSION['usertype'] === "قائد/شيخ العشيرة") {
                     echo '<li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/RMS/roverlist.php">لائحة الجوالة</a>

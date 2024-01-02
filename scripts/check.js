@@ -2,7 +2,7 @@ let checkboxes = document.querySelectorAll(".demand-checkbox");
 
 function getUserIdFromUrl() {
   const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('id') || 'defaultUserId'; 
+  return urlParams.get('id'); 
 }
 
 window.addEventListener('load', () => {
